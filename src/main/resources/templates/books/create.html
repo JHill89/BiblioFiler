@@ -7,10 +7,39 @@
     </title>
 </head>
 <body>
+    <h2>Add A New book</h2>
+
     <form method = 'post' action = '/books/create'>
         <label>Title: <input type = "text" name = "title"/></label>
         <p> </p> <!--TODO: make more efficient (The <p> </p> forces each element to be on it's own line)-->
         <label>Author: <input type = "text" name = "author"/></label>
+        <p> </p>
+        <label>Publication Date: <input type = "text" name = "publicationDate"/></label>
+        <p> </p>
+        <label>Genre: <input type = "text" name = "genre"/></label>
+        <p> </p>
+        <label>Rating: <span class="star-rating"> <!--Creates rating buttons-->
+          <input type="radio" name="rating" value="1">1 <i></i>
+          <input type="radio" name="rating" value="2">2 <i></i>
+          <input type="radio" name="rating" value="3">3 <i></i>
+          <input type="radio" name="rating" value="4">4 <i></i>
+          <input type="radio" name="rating" value="5">5 <i></i>
+        </span></label>
+        <p> </p>
+        <label>Would you read it again?
+            <input type="radio" name="again" value="1">yes <i></i>
+            <input type="radio" name="again" value="0">no <i></i>
+        </label>
+        <p> </p>
+        <label>Select a list to add it to (optional):
+            <p> </p> <!--why does it select the first one when i click any of the words outside checkboxes??-->
+            <input type="checkbox" name="list" value="1">Favorites<i> </i>
+            <input type="checkbox" name="list" value="2">Currently Reading<i> </i>
+            <input type="checkbox" name="list" value="3">Wish List<i> </i>
+            <input type="checkbox" name="list" value="4">Owned<i> </i>
+        </label>
+        <p> </p>
+        <label>Notes:<input type="textarea" name="notes"/></label>
         <p> </p>
         <input type = "submit" value = "Save"/>
     </form>
@@ -18,6 +47,13 @@
 </body>
 </html>
 
+<!--This is the view of the create new book page-->
+
+<!--Once "Save" is clicked I want the same view as when it was clicked but I want a message to appear -->
+<!--at the top that says something like "${title} has been saved"-->
+
+
+<!-- https://github.com/JHill89/orbit-report/blob/master/src/app/app.component.html -->
 <!--<app-orbit-list [satellites]="displayList"></app-orbit-list>-->
 
 <!--<div class="search-form">-->
@@ -25,7 +61,3 @@
 <!--    <button (click)="search(searchTerm.value)">Search</button>-->
 <!--</div>-->
 
-<!--This is the view of the create new book page-->
-
-<!--Once "Save" is clicked I want the same view as when it was clicked but I want a message to appear -->
-<!--at the top that says something like "${title} has been saved"-->
