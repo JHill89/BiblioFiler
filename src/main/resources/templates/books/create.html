@@ -8,10 +8,24 @@
 </head>
 <body>
     <form method = 'post' action = '/books/create'>
-        <input type = "text" name = "title"/>
+        <label>Title: <input type = "text" name = "title"/></label>
+        <p> </p> <!--TODO: make more efficient (The <p> </p> forces each element to be on it's own line)-->
+        <label>Author: <input type = "text" name = "author"/></label>
+        <p> </p>
         <input type = "submit" value = "Save"/>
     </form>
+
 </body>
 </html>
 
+<!--<app-orbit-list [satellites]="displayList"></app-orbit-list>-->
+
+<!--<div class="search-form">-->
+<!--    <label>Search: <input #searchTerm (keyup.enter)="search(searchTerm.value)"/></label>-->
+<!--    <button (click)="search(searchTerm.value)">Search</button>-->
+<!--</div>-->
+
 <!--This is the view of the create new book page-->
+
+<!--Once "Save" is clicked I want the same view as when it was clicked but I want a message to appear -->
+<!--at the top that says something like "${title} has been saved"-->
