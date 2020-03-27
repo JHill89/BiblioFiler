@@ -7,7 +7,13 @@
     </title>
 </head>
 <body>
-    <p>Hello, World!</p>
+    <header>Current Book</header>
+
+    <th:block>
+        <h1 th:text="${title}"></h1>
+        <p th:text="${byAuthor}"></p>
+        Notes: <p style="margin-left: 40px" th:text="${notes}"></p> <!--the input from notes will be below "Notes:" and indented-->
+    </th:block>
 </body>
 </html>
 

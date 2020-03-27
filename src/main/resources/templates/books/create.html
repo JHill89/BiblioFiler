@@ -9,14 +9,14 @@
 <body>
     <h2>Add A New book</h2>
 
-    <form method = 'post' action = '/books/create'>
+    <form method = 'post' action = '/index'>
         <label>Title: <input type = "text" name = "title"/></label>
         <p> </p> <!--TODO: make more efficient (The <p> </p> forces each element to be on it's own line)-->
         <label>Author: <input type = "text" name = "author"/></label>
         <p> </p>
         <label>Publication Date: <input type = "text" name = "publicationDate"/></label>
         <p> </p>
-        <label>Genre: <input type = "text" name = "genre"/></label>
+        <label>Genre: <input type = "text" name = "genre"/></label> <!--TODO: give "add" button so that I can add multiple seperate genres for search function-->
         <p> </p>
         <label>Rating: <span class="star-rating"> <!--Creates rating buttons-->
           <input type="radio" name="rating" value="1">1 <i></i>
@@ -39,11 +39,31 @@
             <input type="checkbox" name="list" value="4">Owned<i> </i>
         </label>
         <p> </p>
+
+        <!--TODO: create a function that GETS the value from the input of notes, it is returning null because the value is not being retrieved-->
+        <!--TODO: give it it's own "add Note" and "add Quote" buttons so that there are several notes/quote that can be stored seperately for search and quote of the day function-->
         <span>
             <label>Notes:</label>
             <p> </p>
             <textarea id="notes" rows="6" cols="80"></textarea>
         </span>
+
+
+
+        <!--        <textarea id="notes"></textarea>-->
+
+<!--        <button type="button" onclick="myFunction()">Try it</button>-->
+
+<!--        <p id="demo"></p>-->
+
+<!--        <script>-->
+
+<!--            function myFunction() {-->
+<!--        var x = document.getElementById("notes").value;-->
+<!--        document.getElementById("demo").innerHTML = x;-->
+<!--    }-->
+<!--        </script>-->
+
 
         <p> </p>
         <input type = "submit" value = "Save"/>
