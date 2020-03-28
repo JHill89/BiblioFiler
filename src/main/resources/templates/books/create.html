@@ -42,27 +42,33 @@
 
         <!--TODO: create a function that GETS the value from the input of notes, it is returning null because the value is not being retrieved-->
         <!--TODO: give it it's own "add Note" and "add Quote" buttons so that there are several notes/quote that can be stored seperately for search and quote of the day function-->
-        <span>
-            <label>Notes:</label>
-            <p> </p>
-            <textarea id="notes" rows="6" cols="80"></textarea>
-        </span>
+<!--        Notes/Quotes: <label><input type="text" name="notes" placeholder="Enter a quote or note here"></label>-->
+
+        <textarea name="notes" id="notes" placeholder="Enter a quote or note here"></textarea> <!--if i use 'name="notes"' it will display on home /index if I use 'id="notes"' try it button will work and display on /books/create page-->
+        <button type="button" onclick="myFunction()">Add Note</button>
+
+
+        <p id="demo"></p>
+
+       <script language="JavaScript">
+            function myFunction() {
+                var x = document.getElementById("notes").value;
+                document.getElementById("demo").innerHTML = x;
+            }
+
+            function onButtonTryIt() {
+                let theNote = document.getElementById("notes").value;
+            }
+       </script>
 
 
 
-        <!--        <textarea id="notes"></textarea>-->
 
-<!--        <button type="button" onclick="myFunction()">Try it</button>-->
-
-<!--        <p id="demo"></p>-->
-
-<!--        <script>-->
-
-<!--            function myFunction() {-->
-<!--        var x = document.getElementById("notes").value;-->
-<!--        document.getElementById("demo").innerHTML = x;-->
-<!--    }-->
-<!--        </script>-->
+<!--        <span>-->
+<!--            <label>Notes:</label>-->
+<!--            <p> </p>-->
+<!--            <textarea id="notes" rows="6" cols="80"></textarea>-->
+<!--        </span>-->
 
 
         <p> </p>
