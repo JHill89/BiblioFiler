@@ -15,5 +15,6 @@ public class HomeController {
         model.addAttribute("notes", notes);
         return "index";
     }
+
 }
 
