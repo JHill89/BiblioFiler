@@ -6,12 +6,10 @@
     <title>Favorite Books</title>
 </head>
 <body>
-    <ul>
-<!--        TODO: use variable for books in favorites list-->
-<!--        TODO: use loop to iterate through and display list items, Thymeleaf part 2 @ 10 min is how to create loop with thymeleaf for lists-->
-        <li>Book #1</li>
-        <li>Book #2</li>
-        <li>Book #3</li>
-    </ul>
+    <ol>
+        <th:block th:each="favBook : ${favBooks}">
+            <li th:text="${favBook}"></li>
+        </th:block>
+    </ol>
 </body>
 </html>
