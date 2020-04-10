@@ -7,6 +7,10 @@
     </title>
 </head>
 <body>
+
+<h1>All Books</h1>
+
+<p th:unless="${allBooks} and ${allBooks.size()}">There are no books!</p>
     <ol>
         <th:block th:each="book : ${allBooks}">
             <li th:text="${book}"></li>

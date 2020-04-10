@@ -7,14 +7,22 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 public class HomeController {
 
-    @RequestMapping(value = "index", method = {RequestMethod.GET, RequestMethod.POST})
-    public String home(@RequestParam String title, String author, String notes, Model model){
-        String byAuthor = "by " + author;
-        model.addAttribute("title", title);
-        model.addAttribute("byAuthor", byAuthor);
-        model.addAttribute("notes", notes);
+    @GetMapping
+    public String home() {
         return "index";
     }
 
+//    @RequestMapping(value = "index", method = {RequestMethod.GET, RequestMethod.POST})
+//    public String home(@RequestParam String title, String author, String notes, Model model){
+//        String byAuthor = "by " + author;
+//        model.addAttribute("title", title);
+//        model.addAttribute("byAuthor", byAuthor);
+//        model.addAttribute("notes", notes);
+//        return "index";
+//    }
+
+//    public String displayFavFive(){
+//        return
+//    }
 }
 

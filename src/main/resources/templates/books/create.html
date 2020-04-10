@@ -9,57 +9,57 @@
 <body>
     <h2>Add A New book</h2>
 
-    <form method = 'post' action = '/index'>
+    <form method = 'post' action = '/books/createBook'>
         <label>Title: <input type = "text" name = "title"/></label>
         <p> </p> <!--TODO: make more efficient (The <p> </p> forces each element to be on it's own line)-->
-        <label>Author: <input type = "text" name = "author"/></label>
-        <p> </p>
-        <label>Publication Date: <input type = "text" name = "publicationDate"/></label>
-        <p> </p>
-        <label>Genre: <input type = "text" name = "genre"/></label> <!--TODO: give "add" button so that I can add multiple seperate genres for search function-->
-        <p> </p>
-        <label>Rating: <span class="star-rating"> <!--Creates rating buttons-->
-          <input type="radio" name="rating" value="1">1 <i></i>
-          <input type="radio" name="rating" value="2">2 <i></i>
-          <input type="radio" name="rating" value="3">3 <i></i>
-          <input type="radio" name="rating" value="4">4 <i></i>
-          <input type="radio" name="rating" value="5">5 <i></i>
-        </span></label>
-        <p> </p>
-        <label>Would you read it again?
-            <input type="radio" name="again" value="1">yes <i></i>
-            <input type="radio" name="again" value="0">no <i></i>
-        </label>
-        <p> </p>
-        <label>Select a list to add it to (optional):
-            <p> </p> <!--why does it select the first one when i click any of the words outside checkboxes??-->
-            <input type="checkbox" name="list" value="1">Favorites<i> </i>
-            <input type="checkbox" name="list" value="2">Currently Reading<i> </i>
-            <input type="checkbox" name="list" value="3">Wish List<i> </i>
-            <input type="checkbox" name="list" value="4">Owned<i> </i>
-        </label>
-        <p> </p>
+<!--        <label>Author: <input type = "text" name = "author"/></label>-->
+<!--        <p> </p>-->
+<!--        <label>Publication Date: <input type = "text" name = "publicationDate"/></label>-->
+<!--        <p> </p>-->
+<!--        <label>Genre: <input type = "text" name = "genre"/></label> &lt;!&ndash;TODO: give "add" button so that I can add multiple seperate genres for search function&ndash;&gt;-->
+<!--        <p> </p>-->
+<!--        <label>Rating: <span class="star-rating"> &lt;!&ndash;Creates rating buttons&ndash;&gt;-->
+<!--          <input type="radio" name="rating" value="1">1 <i></i>-->
+<!--          <input type="radio" name="rating" value="2">2 <i></i>-->
+<!--          <input type="radio" name="rating" value="3">3 <i></i>-->
+<!--          <input type="radio" name="rating" value="4">4 <i></i>-->
+<!--          <input type="radio" name="rating" value="5">5 <i></i>-->
+<!--        </span></label>-->
+<!--        <p> </p>-->
+<!--        <label>Would you read it again?-->
+<!--            <input type="radio" name="again" value="1">yes <i></i>-->
+<!--            <input type="radio" name="again" value="0">no <i></i>-->
+<!--        </label>-->
+<!--        <p> </p>-->
+<!--        <label>Select a list to add it to (optional):-->
+<!--            <p> </p> &lt;!&ndash;why does it select the first one when i click any of the words outside checkboxes??&ndash;&gt;-->
+<!--            <input type="checkbox" name="list" value="1">Favorites<i> </i>-->
+<!--            <input type="checkbox" name="list" value="2">Currently Reading<i> </i>-->
+<!--            <input type="checkbox" name="list" value="3">Wish List<i> </i>-->
+<!--            <input type="checkbox" name="list" value="4">Owned<i> </i>-->
+<!--        </label>-->
+<!--        <p> </p>-->
 
-        <!--TODO: create a function that GETS the value from the input of notes, it is returning null because the value is not being retrieved-->
-        <!--TODO: give it it's own "add Note" and "add Quote" buttons so that there are several notes/quote that can be stored seperately for search and quote of the day function-->
-<!--        Notes/Quotes: <label><input type="text" name="notes" placeholder="Enter a quote or note here"></label>-->
+<!--        &lt;!&ndash;TODO: create a function that GETS the value from the input of notes, it is returning null because the value is not being retrieved&ndash;&gt;-->
+<!--        &lt;!&ndash;TODO: give it it's own "add Note" and "add Quote" buttons so that there are several notes/quote that can be stored seperately for search and quote of the day function&ndash;&gt;-->
+<!--&lt;!&ndash;        Notes/Quotes: <label><input type="text" name="notes" placeholder="Enter a quote or note here"></label>&ndash;&gt;-->
 
-        <textarea name="notes" id="notes" placeholder="Enter a quote or note here"></textarea> <!--if i use 'name="notes"' it will display on home /index if I use 'id="notes"' try it button will work and display on /books/create page-->
-        <button type="button" onclick="myFunction()">Add Note</button>
+<!--        <textarea name="notes" id="notes" placeholder="Enter a quote or note here"></textarea> &lt;!&ndash;if i use 'name="notes"' it will display on home /index if I use 'id="notes"' try it button will work and display on /books/create page&ndash;&gt;-->
+<!--        <button type="button" onclick="myFunction()">Add Note</button>-->
 
 
-        <p id="demo"></p>
+<!--        <p id="demo"></p>-->
 
-       <script language="JavaScript">
-            function myFunction() {
-                var x = document.getElementById("notes").value;
-                document.getElementById("demo").innerHTML = x;
-            }
+<!--       <script language="JavaScript">-->
+<!--            function myFunction() {-->
+<!--                var x = document.getElementById("notes").value;-->
+<!--                document.getElementById("demo").innerHTML = x;-->
+<!--            }-->
 
-            function onButtonTryIt() {
-                let theNote = document.getElementById("notes").value;
-            }
-       </script>
+<!--            function onButtonTryIt() {-->
+<!--                let theNote = document.getElementById("notes").value;-->
+<!--            }-->
+<!--       </script>-->
 
 
 
