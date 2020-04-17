@@ -1,17 +1,11 @@
 <!DOCTYPE html>
 
 <html lang="en" xmlns:th="http://thymeleaf.org/">
-<head>
-    <meta charset="UTF-8"/>
-    <title>
-    </title>
-</head>
+<head th:replace="fragments :: head"></head>
 
 <body>
-    <nav>
-        <a href="/books/allBooks">All Books</a>
-        <a href="/books/create">Add A New Book</a>
-    </nav><br>
+    <h1>BiblioFiler</h1>
+    <nav th:replace="fragments :: navigation"></nav>
 
     <header>Current Book</header>
 

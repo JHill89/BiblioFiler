@@ -6,6 +6,7 @@
     <title>Favorite Books</title>
 </head>
 <body>
+    <nav th:replace="fragments :: navigation"></nav>
     <ol>
         <th:block th:each="favBook : ${favBooks}">
             <li th:text="${favBook}"></li>

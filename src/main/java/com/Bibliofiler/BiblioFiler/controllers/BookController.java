@@ -29,7 +29,7 @@ public class BookController {
     @RequestMapping(value = "createBook", method = {RequestMethod.GET, RequestMethod.POST})
     public String addNewBookToAllBooksPage(@RequestParam String title, Model model) {
         allBooks.add(title);
-//        model.addAttribute();
+        model.addAttribute("allBooks", allBooks);
         return "books/allBooks";
     }
 

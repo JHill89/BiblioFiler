@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://thymeleaf.org/">
+<head th:fragment="head">
+    <meta charset="UTF-8"/>
+    <title>BiblioFiler</title>
+
+    <script th:source="@{/script.js}"></script>
+    <link th:href="@{/styles.css}" rel="stylesheet">
+
+</head>
+<body>
+
+<nav th:fragment="navigation">
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/books/allBooks">All Books</a></li>
+        <li><a href="/books/favorites-list">Favorite Books</a></li>
+        <li><a href="/books/create">Add New Book</a></li>
+    </ul>
+</nav>
+
+</body>
+</html>

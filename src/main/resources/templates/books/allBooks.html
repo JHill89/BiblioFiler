@@ -1,14 +1,10 @@
 <!DOCTYPE html>
 
 <html lang="en" xmlns:th="http://thymeleaf.org/">
-<head>
-    <meta charset="UTF-8"/>
-    <title>
-    </title>
-</head>
+<head th:replace="fragments :: head"></head>
 <body>
-
-<h1>All Books</h1>
+    <h1>All Books</h1>
+    <nav th:replace="fragments :: navigation"></nav>
 
 <p th:unless="${allBooks} and ${allBooks.size()}">There are no books!</p>
     <ol>
