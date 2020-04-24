@@ -2,15 +2,21 @@
 
 <html lang="en" xmlns:th="http://thymeleaf.org/">
 <head th:replace="fragments :: head"></head>
-<body>
+<body class="container">
     <h1>All Books</h1>
     <nav th:replace="fragments :: navigation"></nav>
 
 <p th:unless="${allBooks} and ${allBooks.size()}">There are no books!</p>
-    <ol>
-        <th:block th:each="book : ${allBooks}">
-            <li th:text="${book}"></li>
-        </th:block>
-    </ol>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Title</th>
+<!--                <th>Author</th>-->
+            </tr>
+        </thead>
+        <tr th:each="book : ${allBooks}">
+            <td th:text="${book}"></td>
+        </tr><!--TODO: add column for author-->
+    </table>
 </body>
 </html>

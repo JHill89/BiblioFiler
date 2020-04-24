@@ -2,47 +2,64 @@
 
 <html lang="en" xmlns:th="http://thymeleaf.org/">
 <head th:replace="fragments :: head"></head>
-<body>
+<body class="container">
     <h1>Add A New book</h1>
     <nav th:replace="fragments :: navigation"></nav>
 
     <form method = 'post' action = '/books/createBook'>
-        <label>Title: <input type = "text" name = "title"/></label>
+        <div class="form-group">
+            <label>Title: <input type = "text" name = "title" class="form-control"/></label>
+        </div>
         <p> </p> <!--TODO: make more efficient (The <p> </p> forces each element to be on it's own line)-->
-        <label>Author: <input type = "text" name = "author"/></label>
+        <div class="form-group">
+            <label>Author: <input type = "text" name = "author" class="form-control"/></label>
+        </div>
         <p> </p>
-        <label>Publication Date: <input type = "text" name = "publicationDate"/></label>
+        <div class="form-group">
+            <label>Publication Date: <input type = "text" name = "publicationDate" class="form-control"/></label>
+        </div>
         <p> </p>
-        <label>Genre: <input type = "text" name = "genre"/></label> <!--TODO: give "add" button so that I can add multiple seperate genres for search function-->
+        <div class="form-group">
+            <label>Genre: <input type = "text" name = "genre" class="form-control"/></label> <!--TODO: give "add" button so that I can add multiple seperate genres for search function-->
+        </div>
         <p> </p>
-        <label>Rating: <span class="star-rating"> <!--Creates rating buttons-->
-          <input type="radio" name="rating" value="1">1 <i></i>
-          <input type="radio" name="rating" value="2">2 <i></i>
-          <input type="radio" name="rating" value="3">3 <i></i>
-          <input type="radio" name="rating" value="4">4 <i></i>
-          <input type="radio" name="rating" value="5">5 <i></i>
-        </span></label>
+        <div class="form-group">
+            <label>Rating: <span class="star-rating"> <!--Creates rating buttons-->
+                <input type="radio" name="rating" value="1">1 <i></i>
+                <input type="radio" name="rating" value="2">2 <i></i>
+                <input type="radio" name="rating" value="3">3 <i></i>
+                <input type="radio" name="rating" value="4">4 <i></i>
+                <input type="radio" name="rating" value="5">5 <i></i>
+            </span></label>
+        </div>
         <p> </p>
-        <label>Would you read it again?
-            <input type="radio" name="again" value="1">yes <i></i>
-            <input type="radio" name="again" value="0">no <i></i>
-        </label>
+        <div class="form-group">
+            <label>Would you read it again?
+                <input type="radio" name="again" value="1">yes <i></i>
+                <input type="radio" name="again" value="0">no <i></i>
+            </label>
+        </div>
         <p> </p>
-        <label>Select a list to add it to (optional):
-            <p> </p> <!--why does it select the first one when i click any of the words outside checkboxes??-->
-            <input type="checkbox" name="list" value="1">Favorites<i> </i>
-            <input type="checkbox" name="list" value="2">Currently Reading<i> </i>
-            <input type="checkbox" name="list" value="3">Wish List<i> </i>
-            <input type="checkbox" name="list" value="4">Owned<i> </i>
-        </label>
+        <div class="form-group">
+            Select a list to add it to (optional):
+                 <!--why does it select the first one when i click any of the words outside checkboxes??-->
+            <label>
+                <input type="checkbox" name="list" value="1">Favorites<i> </i>
+                <input type="checkbox" name="list" value="2">Currently Reading<i> </i>
+                <input type="checkbox" name="list" value="3">Wish List<i> </i>
+                <input type="checkbox" name="list" value="4">Owned<i> </i>
+            </label>
+        </div>
         <p> </p>
 
         <!--TODO: create a function that GETS the value from the input of notes, it is returning null because the value is not being retrieved-->
         <!--TODO: give it it's own "add Note" and "add Quote" buttons so that there are several notes/quote that can be stored seperately for search and quote of the day function-->
 <!--        Notes/Quotes: <label><input type="text" name="notes" placeholder="Enter a quote or note here"></label>-->
 
-        <textarea name="notes" id="notes" placeholder="Enter a quote or note here"></textarea> <!--if i use 'name="notes"' it will display on home /index if I use 'id="notes"' try it button will work and display on /books/create page-->
-        <button type="button" onclick="myFunction()">Add Note</button>
+            <textarea name="notes" id="notes" placeholder="Enter a quote or note here"></textarea> <!--if i use 'name="notes"' it will display on home /index if I use 'id="notes"' try it button will work and display on /books/create page-->
+
+            <button type="button" onclick="myFunction()" class="btn-default">Add Note</button>
+
 
 
         <p id="demo"></p>
@@ -68,8 +85,10 @@
 <!--        </span>-->
 
 
-        <p> </p>
-        <input type = "submit" value = "Save"/>
+        <p> </p><br><br>
+        <div class="form-group">
+            <input type = "submit" value = "Save" class="btn btn-lg btn-success"/>
+        </div>
     </form>
 
 </body>

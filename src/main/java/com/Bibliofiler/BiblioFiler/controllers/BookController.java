@@ -15,7 +15,7 @@ public class BookController {
 
     //displays all books
     @GetMapping("allBooks")
-    public String allBooksPage(Model model) {
+    public String displayAllBooksPage(Model model) {
         model.addAttribute("allBooks", allBooks);
         return "books/allBooks";
     }
